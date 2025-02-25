@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+body{
+  font-family: "Mona Sans", serif;
+  background-color: #dae0e3;
+}
