@@ -25,9 +25,9 @@ export function Portafolio() {
             {
               links.map(link => (
                 <a
-                  key={link.path}
+                  key={link.name}
                   href="#"
-                  className="px-6 py-2 border rounded-3xl hover:text-white hover:bg-black transition-all">
+                  className="font-medium px-6 py-2 border rounded-3xl  hover:bg-[#c8ff00] transition-all">
                   {link.name}
                 </a>
               ))
@@ -38,7 +38,7 @@ export function Portafolio() {
               redes.map(rede => (
                 <a
                   className="p-2 bg-black rounded-full"
-                  href={rede.path}
+                  href={rede.logo}
                   key={rede.logo}>
                   {rede.logo}
                 </a>
@@ -68,11 +68,11 @@ export function Portafolio() {
                   <ArrowUpRigth />
                 </a>
               </div>
-              <p className="2xl:text-xl">
+              <p className="text-sm 2xl:text-xl">
                 EXPLORA MIS PROYECTOS MÁS DESTACADOS COMO PETICIONES DE API CON REACT O UN E-COMMERCE CON MEDERNO DISEÑO RESPONSIVO Y FUNCIONALIDADES AVANZADAS.
               </p>
 
-              <p className="2xl:text-xl">
+              <p className="text-sm 2xl:text-xl">
                 CADA PROYECTO REFLEJA MI PASIÓN POR CREAR INTERFACES EFICIENTES
               </p>
             </div>
@@ -86,7 +86,7 @@ export function Portafolio() {
                   <ArrowUpRigth />
                 </a>
               </div>
-              <p className="2xl:text-xl">
+              <p className="text-sm 2xl:text-xl">
                 EXPERTO EN REACT, JAVACRIPT, TAILWIND, HTML, CSS Y DISEÑO RESPONSIBO. CREANDO INTERFACES LIMPIAS Y FUNCIONALES.
               </p>
               <div className="flex -space-x-4">
@@ -127,19 +127,27 @@ export function Portafolio() {
 
       </section>
 
-      <section className="h-screen">
-        <div className="w-full bg-black h-[80%] rounded-2xl">
+      <section className="h-screen w-full">
+        <div className="h-[90%] bg-[url('/about.png')] rounded-2xl bg-cover w-full ">
 
         </div>
       </section>
 
-      <section>
-
-      </section>
-
-
-
-
+      {/* <section className="h-auto bg-black p-6">      
+        <div className="grid grid-cols-3 grid-rows-3 gap-4">
+          <div className="bg-white h-[300px] rounded-2xl" >1</div>
+          <div className="bg-white h-[300px] rounded-2xl" >2</div>
+          <div className="bg-white h-[300px] rounded-2xl" >3</div>
+          <div className="bg-white h-[300px] rounded-2xl" >4</div>
+          <div className="bg-white h-[300px] rounded-2xl" >5</div>
+          <div className="bg-white h-[300px] rounded-2xl" >6</div>
+          <div className="bg-white h-[300px] rounded-2xl" >7</div>
+          <div className="bg-white h-[300px] rounded-2xl" >8</div>
+          <div className="bg-white h-[300px] rounded-2xl" >9</div>
+        </div>
+          
+      
+      </section> */}
     </div>
   )
 }
