@@ -27,7 +27,7 @@ export function Portafolio() {
                 <a
                   key={link.name}
                   href="#"
-                  className="px-6 py-2 border rounded-3xl hover:text-white hover:bg-black transition-all">
+                  className="font-medium px-6 py-2 border rounded-3xl  hover:bg-[#c8ff00] transition-all">
                   {link.name}
                 </a>
               ))
@@ -38,7 +38,7 @@ export function Portafolio() {
               redes.map(rede => (
                 <a
                   className="p-2 bg-black rounded-full"
-                  href={rede.path}
+                  href={rede.logo}
                   key={rede.logo}>
                   {rede.logo}
                 </a>
@@ -68,11 +68,11 @@ export function Portafolio() {
                   <ArrowUpRigth />
                 </a>
               </div>
-              <p className="2xl:text-xl">
+              <p className="text-sm 2xl:text-xl">
                 EXPLORA MIS PROYECTOS MÁS DESTACADOS COMO PETICIONES DE API CON REACT O UN E-COMMERCE CON MEDERNO DISEÑO RESPONSIVO Y FUNCIONALIDADES AVANZADAS.
               </p>
 
-              <p className="2xl:text-xl">
+              <p className="text-sm 2xl:text-xl">
                 CADA PROYECTO REFLEJA MI PASIÓN POR CREAR INTERFACES EFICIENTES
               </p>
             </div>
@@ -86,7 +86,7 @@ export function Portafolio() {
                   <ArrowUpRigth />
                 </a>
               </div>
-              <p className="2xl:text-xl">
+              <p className="text-sm 2xl:text-xl">
                 EXPERTO EN REACT, JAVACRIPT, TAILWIND, HTML, CSS Y DISEÑO RESPONSIBO. CREANDO INTERFACES LIMPIAS Y FUNCIONALES.
               </p>
               <div className="flex -space-x-4">
@@ -127,73 +127,20 @@ export function Portafolio() {
 
       </section>
 
-      <section className="h-screen space-y-10 w-full">
+      <section className="h-screen">
+        <div className="w-full bg-black h-[80%] rounded-2xl">
 
-        <div>
-          <h1 className="text-4xl font-bold">PROJECTOS</h1>
-          <span className="bg-black text-[#C8FF00] text-lg tracking-[.40em] px-[35px]">
-            PROJECTS
-          </span>
-        </div>
-
-        <div className="grid grid-cols-3 grid-rows-2 gap-4 h-[90%]">
-          <div className="bg-[#D9D9D9] rounded-2xl" >1</div>
-          <div className="bg-[#D9D9D9] rounded-2xl" >2</div>
-          <div className="bg-[#D9D9D9] rounded-2xl" >3</div>
-          <div className="bg-[#D9D9D9] rounded-2xl" >4</div>
-          <div className="bg-[#D9D9D9] rounded-2xl" >5</div>
-          <div className="bg-[#D9D9D9] rounded-2xl" >6</div>
         </div>
 
 
       </section>
 
-      <section className="h-auto w-full border bg-black rounded-2xl p-10">
-        <div className="flex">
-          <div className="w-1/2">
-            <h1 className="text-4xl text-[#C8FF00] font-bold">PROJECTOS</h1>
-            <span className="bg-white text-lg tracking-[.40em] px-[35px]">
-              PROJECTS
-            </span>
+      <section>
 
-            <div className="text-white">
-              <h1 className="text-8xl my-10">
-                Hola soy JP, ¡Encantado de Conocerte!
-              </h1>
-              <div className="text-3xl space-y-5">
-                <p>
-                  Profesional con más de 1 año de experiencia en el diseño y desarrollo de aplicaciones web.
-                </p>
-                <p>
-                  specializado en diseño de interfaces (UI/UX) y con dominio de tecnologías modernas como JavaScript, React, TypeScript, CSS y otras herramientas del ecosistema frontend.
-                </p>
-              </div>
-            </div>
-
-          </div>
-          <div className="text-white w-1/2">
-            gola
-          </div>
-        </div>
       </section>
 
-      <footer className="h-[150px] flex justify-between items-center">
-        <h1 className="text-xl font-semibold tracking-[.30em] border-b-2">
-          PORTFOLIO WEB | JP
-        </h1>
-        <div className="flex gap-1">
-          {
-            redes.map(rede => (
-              <a
-                className="p-2 bg-black rounded-full"
-                href={rede.path}
-                key={rede.logo}>
-                {rede.logo}
-              </a>
-            ))
-          }
-        </div>
-      </footer>
+
+
 
     </div>
   )
