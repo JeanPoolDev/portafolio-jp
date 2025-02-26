@@ -127,17 +127,73 @@ export function Portafolio() {
 
       </section>
 
-      <section className="h-screen">
-        <div className="w-full bg-black h-[80%] rounded-2xl">
+      <section className="h-screen space-y-10 w-full">
 
+        <div>
+          <h1 className="text-4xl font-bold">PROJECTOS</h1>
+          <span className="bg-black text-[#C8FF00] text-lg tracking-[.40em] px-[35px]">
+            PROJECTS
+          </span>
+        </div>
+
+        <div className="grid grid-cols-3 grid-rows-2 gap-4 h-[90%]">
+          <div className="bg-[#D9D9D9] rounded-2xl" >1</div>
+          <div className="bg-[#D9D9D9] rounded-2xl" >2</div>
+          <div className="bg-[#D9D9D9] rounded-2xl" >3</div>
+          <div className="bg-[#D9D9D9] rounded-2xl" >4</div>
+          <div className="bg-[#D9D9D9] rounded-2xl" >5</div>
+          <div className="bg-[#D9D9D9] rounded-2xl" >6</div>
         </div>
 
 
       </section>
 
-      <section>
+      <section className="h-auto w-full border bg-[url('about.png')] rounded-2xl p-10 bg-cover">
+        <div className="flex">
+          <div className="w-1/2">
+            <h1 className="text-4xl text-[#C8FF00] font-bold">PROJECTOS</h1>
+            <span className="bg-white text-lg tracking-[.40em] px-[35px]">
+              PROJECTS
+            </span>
 
+            <div className="text-white">
+              <h1 className="text-8xl my-10">
+                Hola soy JP, ¡Encantado de Conocerte!
+              </h1>
+              <div className="text-3xl space-y-5">
+                <p>
+                  Profesional con más de 1 año de experiencia en el diseño y desarrollo de aplicaciones web.
+                </p>
+                <p>
+                  specializado en diseño de interfaces (UI/UX) y con dominio de tecnologías modernas como JavaScript, React, TypeScript, CSS y otras herramientas del ecosistema frontend.
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div className="text-white w-1/2">
+            gola
+          </div>
+        </div>
       </section>
+
+      <footer className="h-[150px] flex justify-between items-center">
+        <h1 className="text-xl font-semibold tracking-[.30em] border-b-2">
+          PORTFOLIO WEB | JP
+        </h1>
+        <div className="flex gap-1">
+          {
+            redes.map(rede => (
+              <a
+                className="p-2 bg-black rounded-full"
+                href={rede.path}
+                key={rede.logo}>
+                {rede.logo}
+              </a>
+            ))
+          }
+        </div>
+      </footer>
 
 
 
