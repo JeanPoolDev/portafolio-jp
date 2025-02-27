@@ -13,6 +13,9 @@ const redes = [
   { path: '#', logo: <Github /> },
 ]
 
+const projects = [
+  { path: 'https://journal-app-drab-zeta.vercel.app/', title: 'Journal App', description: 'Escribe el dia a día en un solo lugar', fondo: '/project1.png' }
+]
 export function Portafolio() {
   return (
     <div className="mx-10 2xl:mx-20 space-y-16">
@@ -127,7 +130,7 @@ export function Portafolio() {
 
       </section>
 
-      <section className="h-screen space-y-10 w-full">
+      <section className="h-auto space-y-10 w-full">
 
         <div>
           <h1 className="text-4xl font-bold">PROJECTOS</h1>
@@ -136,19 +139,32 @@ export function Portafolio() {
           </span>
         </div>
 
-        <div className="grid grid-cols-3 grid-rows-2 gap-4 h-[90%]">
-          <div className="bg-[#D9D9D9] rounded-2xl" >1</div>
-          <div className="bg-[#D9D9D9] rounded-2xl" >2</div>
-          <div className="bg-[#D9D9D9] rounded-2xl" >3</div>
-          <div className="bg-[#D9D9D9] rounded-2xl" >4</div>
-          <div className="bg-[#D9D9D9] rounded-2xl" >5</div>
-          <div className="bg-[#D9D9D9] rounded-2xl" >6</div>
+        <div className="grid grid-cols-3 grid-rows-2 gap-4">
+          {
+            projects.map((project) => (
+              <div 
+              className={`bg-cover rounded-2xl h-[300px]`} 
+              key={project.title} 
+              style={{ backgroundImage: `url(${project.fondo})` }}>
+                <a 
+                  href={project.path}
+                  target="_blank"
+                  className="flex flex-col justify-end h-full opacity-0 
+                hover:opacity-100 p-6 degradado transition-all ease-in-out">
+                  <h1 className="text-[#C8FF00] text-xl font-bold">
+                    {project.title} 
+                  </h1>
+                  <p className="text-white font-semibold text-lg">
+                    {project.description}
+                  </p>
+                </a>
+              </div>
+            ))
+          }
         </div>
-
-
       </section>
 
-      <section className="h-auto w-full border bg-[url('about.png')] rounded-2xl p-10 bg-cover">
+      <section className="h-auto w-full border bg-[url('/about.png')] rounded-2xl p-10 bg-cover">
         <div className="flex">
           <div className="w-1/2">
             <h1 className="text-4xl text-[#C8FF00] font-bold">PROJECTOS</h1>
@@ -157,10 +173,10 @@ export function Portafolio() {
             </span>
 
             <div className="text-white">
-              <h1 className="text-8xl my-10">
+              <h1 className="text-7xl 2xl:text-8xl my-10">
                 Hola soy JP, ¡Encantado de Conocerte!
               </h1>
-              <div className="text-3xl space-y-5">
+              <div className="text-2xl 2xl:text-3xl space-y-5">
                 <p>
                   Profesional con más de 1 año de experiencia en el diseño y desarrollo de aplicaciones web.
                 </p>
@@ -179,7 +195,7 @@ export function Portafolio() {
 
       <footer className="h-[150px] flex justify-between items-center">
         <h1 className="text-xl font-semibold tracking-[.30em] border-b-2">
-          PORTFOLIO WEB | JP
+          @ PORTFOLIO WEB | JP
         </h1>
         <div className="flex gap-1">
           {

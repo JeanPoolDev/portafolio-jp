@@ -4,3 +4,9 @@ body{
   font-family: "Mona Sans", serif;
   background-color: #dae0e3;
 }
+
+.degradado{
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); 
+  height: 100%;
+  border-radius: 16px;
+}
