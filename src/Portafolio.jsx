@@ -3,9 +3,8 @@ import { ArrowUpRigth, Github, Linkedin, Youtu } from "./icons";
 
 const links = [
   { path: '#', name: 'HOME' },
-  { path: '#', name: 'HISTORY' },
-  { path: '#', name: 'PROJECTS' },
-  { path: '#', name: 'ABOUT US' },
+  { path: '#projects', name: 'PROJECTS' },
+  { path: '#aboutme', name: 'ABOUT US' },
 ];
 
 const redes = [
@@ -30,7 +29,7 @@ export function Portafolio() {
               links.map(link => (
                 <a
                   key={link.name}
-                  href="#"
+                  href={link.path}
                   className="font-medium px-6 py-2 border rounded-3xl  hover:bg-[#c8ff00] transition-all">
                   {link.name}
                 </a>
@@ -56,12 +55,12 @@ export function Portafolio() {
           <div className="w-full rounded-2xl h-[60%] mb-4">
             <img
               className="object-cover w-full h-full rounded-2xl"
-              src="/fondo.png"
+              src="/home.png"
               alt="fondo"
             />
           </div>
 
-          <div className="w-full h-[40%] flex gap-4">
+          <div className="w-full h-[40%] flex gap-4" >
 
             <div className="w-1/3 rounded-2xl p-6 space-y-4 bg-black text-white">
               <div className="flex justify-between">
@@ -131,7 +130,7 @@ export function Portafolio() {
 
       </section>
 
-      <section className="h-auto space-y-10 w-full">
+      <section className="h-auto space-y-10 w-full" id="projects">
 
         <div>
           <h1 className="text-4xl font-bold">PROJECTOS</h1>
@@ -165,7 +164,7 @@ export function Portafolio() {
         </div>
       </section>
 
-      <section className="h-auto w-full border bg-[url('/about.png')] rounded-2xl p-10 bg-cover">
+      <section className="h-auto w-full border bg-[url('/about.png')] rounded-2xl p-10 bg-cover" id="aboutme">
         <div className="flex">
           <div className="w-1/2">
             <h1 className="text-4xl text-[#C8FF00] font-bold">PROJECTOS</h1>
@@ -182,7 +181,7 @@ export function Portafolio() {
                   Profesional con más de 1 año de experiencia en el diseño y desarrollo de aplicaciones web.
                 </p>
                 <p>
-                  specializado en diseño de interfaces (UI/UX) y con dominio de tecnologías modernas como JavaScript, React, TypeScript, CSS y otras herramientas del ecosistema frontend.
+                  Especializado en diseño de interfaces (UI/UX) y con dominio de tecnologías modernas como JavaScript, React, TypeScript, CSS y otras herramientas del ecosistema frontend.
                 </p>
               </div>
             </div>
@@ -211,9 +210,6 @@ export function Portafolio() {
           }
         </div>
       </footer>
-
-
-
 
     </div>
   )
