@@ -1,3 +1,4 @@
+import { Slider } from "./components/Slider";
 import { ArrowUpRigth, Github, Linkedin, Youtu } from "./icons";
 
 const links = [
@@ -142,17 +143,17 @@ export function Portafolio() {
         <div className="grid grid-cols-3 grid-rows-2 gap-4">
           {
             projects.map((project) => (
-              <div 
-              className={`bg-cover rounded-2xl h-[300px]`} 
-              key={project.title} 
-              style={{ backgroundImage: `url(${project.fondo})` }}>
-                <a 
+              <div
+                className={`bg-cover rounded-2xl h-[300px]`}
+                key={project.title}
+                style={{ backgroundImage: `url(${project.fondo})` }}>
+                <a
                   href={project.path}
                   target="_blank"
                   className="flex flex-col justify-end h-full opacity-0 
                 hover:opacity-100 p-6 degradado transition-all ease-in-out">
                   <h1 className="text-[#C8FF00] text-xl font-bold">
-                    {project.title} 
+                    {project.title}
                   </h1>
                   <p className="text-white font-semibold text-lg">
                     {project.description}
@@ -187,9 +188,9 @@ export function Portafolio() {
             </div>
 
           </div>
-          <div className="text-white w-1/2">
-            gola
-          </div>
+
+          <Slider />
+
         </div>
       </section>
 
