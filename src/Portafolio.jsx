@@ -1,5 +1,5 @@
-import { Slider } from "./components/Slider";
-import { ArrowUpRigth, Github, Linkedin, Youtu } from "./icons";
+import { Slider, stacks } from "./components/Slider";
+import { ArroUp, ArrowUpRigth, Github, Linkedin, Youtu } from "./icons";
 
 const links = [
   { path: '#', name: 'HOME' },
@@ -8,18 +8,19 @@ const links = [
 ];
 
 const redes = [
-  { path: 'https://www.youtube.com/', logo: <Youtu /> },
-  { path: 'https://www.linkedin.com/in/jean-pool-rojas-avila-70535b251/', logo: <Linkedin /> },
-  { path: 'https://github.com/JeanPoolDev', logo: <Github /> },
+  { id: 1, path: 'https://www.youtube.com/', logo: <Youtu /> },
+  { id: 2, path: 'https://www.linkedin.com/in/jean-pool-rojas-avila-70535b251/', logo: <Linkedin /> },
+  { id: 3, path: 'https://github.com/JeanPoolDev', logo: <Github /> },
 ]
 
 const projects = [
   { path: 'https://journal-app-drab-zeta.vercel.app/', title: 'Journal App', description: 'Escribe el dia a día en un solo lugar', fondo: '/project1.png' },
-  
+
 ]
+
 export function Portafolio() {
   return (
-    <div className="mx-2 sm:mx-10 2xl:mx-20 space-y-16">
+    <div className="mx-2 sm:mx-10 md:mx-6 2xl:mx-20 space-y-16">
 
       <section className="h-auto">
 
@@ -41,9 +42,10 @@ export function Portafolio() {
             {
               redes.map(rede => (
                 <a
+                  key={rede.id}
                   className="p-2 bg-black rounded-full"
-                  href={rede.logo}
-                  key={rede.path}>
+                  href={rede.path}
+                >
                   {rede.logo}
                 </a>
               ))
@@ -51,7 +53,7 @@ export function Portafolio() {
           </div>
         </header>
 
-        <div className="h-auto sm:h-screen">
+        <div className="h-auto md:h-screen">
 
           <div className="w-full rounded-2xl h-[60%] mb-4">
             <img
@@ -61,14 +63,14 @@ export function Portafolio() {
             />
           </div>
 
-          <div className="w-full h-auto sm:h-[40%] flex gap-4 flex-col sm:flex-row" >
+          <div className="w-full h-auto dm:h-[40%] flex gap-4 flex-col md:flex-row" >
 
-            <div className="w-full sm:w-1/3 rounded-2xl p-6 space-y-4 bg-black text-white">
+            <div className="w-full md:w-1/3 rounded-2xl p-6 space-y-4 bg-black text-white">
               <div className="flex justify-between">
                 <h1 className="text-2xl 2xl:text-4xl font-bold w-[60%]">
                   PROYECTOS DESTACADOS
                 </h1>
-                <a href="#" className="w-[30%] flex justify-end">
+                <a href="#projects" className="w-[30%] flex justify-end">
                   <ArrowUpRigth />
                 </a>
               </div>
@@ -81,37 +83,40 @@ export function Portafolio() {
               </p>
             </div>
 
-            <div className="w-full sm:w-1/3 border rounded-2xl p-6 space-y-4">
+            <div className="w-full md:w-1/3  border rounded-2xl p-6 space-y-4">
               <div className="flex justify-between">
                 <h1 className="text-2xl 2xl:text-4xl font-bold w-[60%]">
                   STACK TECNOLÓGICO
                 </h1>
-                <a href="#" className="w-[30%] flex justify-end">
+                <a href="#aboutme" className="w-[30%] flex justify-end">
                   <ArrowUpRigth />
                 </a>
               </div>
               <p className="text-sm 2xl:text-xl">
-                EXPERTO EN REACT, JAVACRIPT, TAILWIND, HTML, CSS Y DISEÑO RESPONSIBO. CREANDO INTERFACES LIMPIAS Y FUNCIONALES.
+                EXPERTO EN REACT, JAVACRIPT, TAILWIND, HTML, CSS Y DISEÑO RESPONSIVO. CREANDO INTERFACES LIMPIAS Y FUNCIONALES.
               </p>
               <div className="flex -space-x-4">
 
                 {
-                  [1, 2, 4, 5].map(index => (
-                    <div
-                      key={index}
-                      className="w-15 h-15 2xl:w-25 2xl:h-25 rounded-full bg-black border-white border"></div>
+                  stacks.map(stack => (
+                    <img
+                      key={stack.id}
+                      src={stack.img}
+                      className="w-20 h-15 2xl:w-25 2xl:h-25 rounded-full"
+                    />
+
                   ))
                 }
 
               </div>
             </div>
 
-            <div className="w-full sm:w-1/3 border rounded-2xl p-6 flex flex-col justify-between">
+            <div className="w-full md:w-1/3 border rounded-2xl p-6 flex flex-col justify-between">
               <div className="flex justify-between">
                 <h1 className="text-2xl 2xl:text-4xl font-bold w-[60%]">
                   ¿QUIÉN ES JP DEV?
                 </h1>
-                <a href="#" className="w-[30%] flex justify-end">
+                <a href="#aboutme" className="w-[30%] flex justify-end">
                   <ArrowUpRigth />
                 </a>
               </div>
@@ -162,17 +167,17 @@ export function Portafolio() {
         </div>
       </section>
 
-      <section className="h-auto w-full border bg-[url('/about.png')] rounded-2xl p-4 sm:p-10 bg-cover" id="aboutme">
-        <div className="flex flex-col sm:flex-row">
+      <section className="h-auto w-full border bg-[url('/about.png')] rounded-2xl p-4 md:p-10 bg-cover" id="aboutme">
+        <div className="flex flex-col md:flex-row">
 
-          <div className="w-full sm:w-1/2 mb-10 sm:mb-0">
+          <div className="w-full md:w-1/2 mb-10 md:mb-0">
             <h1 className="text-4xl text-[#C8FF00] font-bold">PROJECTOS</h1>
             <span className="bg-white text-lg tracking-[.40em] px-[35px]">
               PROJECTS
             </span>
 
             <div className="text-white ">
-              <h1 className="text-5xl sm:text-7xl 2xl:text-8xl my-10">
+              <h1 className="text-5xl md:text-7xl 2xl:text-8xl my-10">
                 Hola soy JP, ¡Encantado de Conocerte!
               </h1>
               <div className="text-2xl 2xl:text-3xl space-y-5">
@@ -192,23 +197,29 @@ export function Portafolio() {
         </div>
       </section>
 
-      <footer className="h-[150px] flex sm:flex-row flex-col justify-evenly sm:justify-between items-center">
-        <h1 className="text-xl font-semibold tracking-[.30em] border-b-2">
+      <footer className="h-[150px] flex md:flex-row flex-col justify-evenly md:justify-between items-center">
+        <h1 className="text-lg md:text-xl font-semibold tracking-[.30em] border-b-2 hover:scale-125 transition-all">
           @ PORTFOLIO WEB | JP
         </h1>
         <div className="flex gap-1">
           {
             redes.map(rede => (
               <a
+                key={rede.id}
                 className="p-2 bg-black rounded-full"
                 href={rede.path}
-                key={rede.logo}>
+              >
                 {rede.logo}
               </a>
             ))
           }
         </div>
       </footer>
+
+      <a href="#" className="w-20 h-20 bg-white fixed bottom-10 right-10
+       text-black flex justify-center items-center border-2 rounded-lg hover:scale-125 transition-all">
+        <ArroUp />
+      </a>
 
     </div>
   )
