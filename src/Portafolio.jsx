@@ -8,23 +8,24 @@ const links = [
 ];
 
 const redes = [
-  { path: '#', logo: <Youtu /> },
-  { path: '#', logo: <Linkedin /> },
-  { path: '#', logo: <Github /> },
+  { path: 'https://www.youtube.com/', logo: <Youtu /> },
+  { path: 'https://www.linkedin.com/in/jean-pool-rojas-avila-70535b251/', logo: <Linkedin /> },
+  { path: 'https://github.com/JeanPoolDev', logo: <Github /> },
 ]
 
 const projects = [
-  { path: 'https://journal-app-drab-zeta.vercel.app/', title: 'Journal App', description: 'Escribe el dia a día en un solo lugar', fondo: '/project1.png' }
+  { path: 'https://journal-app-drab-zeta.vercel.app/', title: 'Journal App', description: 'Escribe el dia a día en un solo lugar', fondo: '/project1.png' },
+  
 ]
 export function Portafolio() {
   return (
-    <div className="mx-10 2xl:mx-20 space-y-16">
+    <div className="mx-2 sm:mx-10 2xl:mx-20 space-y-16">
 
       <section className="h-auto">
 
         <header className="h-[100px] flex justify-between items-center">
           <div className="text-lg font-bold">JP DEV</div>
-          <nav className="flex gap-4">
+          <nav className="hidden sm:flex gap-4 items-center">
             {
               links.map(link => (
                 <a
@@ -42,7 +43,7 @@ export function Portafolio() {
                 <a
                   className="p-2 bg-black rounded-full"
                   href={rede.logo}
-                  key={rede.logo}>
+                  key={rede.path}>
                   {rede.logo}
                 </a>
               ))
@@ -50,7 +51,7 @@ export function Portafolio() {
           </div>
         </header>
 
-        <div className="h-screen">
+        <div className="h-auto sm:h-screen">
 
           <div className="w-full rounded-2xl h-[60%] mb-4">
             <img
@@ -60,9 +61,9 @@ export function Portafolio() {
             />
           </div>
 
-          <div className="w-full h-[40%] flex gap-4" >
+          <div className="w-full h-auto sm:h-[40%] flex gap-4 flex-col sm:flex-row" >
 
-            <div className="w-1/3 rounded-2xl p-6 space-y-4 bg-black text-white">
+            <div className="w-full sm:w-1/3 rounded-2xl p-6 space-y-4 bg-black text-white">
               <div className="flex justify-between">
                 <h1 className="text-2xl 2xl:text-4xl font-bold w-[60%]">
                   PROYECTOS DESTACADOS
@@ -80,7 +81,7 @@ export function Portafolio() {
               </p>
             </div>
 
-            <div className="w-1/3 border rounded-2xl p-6 space-y-4">
+            <div className="w-full sm:w-1/3 border rounded-2xl p-6 space-y-4">
               <div className="flex justify-between">
                 <h1 className="text-2xl 2xl:text-4xl font-bold w-[60%]">
                   STACK TECNOLÓGICO
@@ -105,7 +106,7 @@ export function Portafolio() {
               </div>
             </div>
 
-            <div className="w-1/3 border rounded-2xl p-6 flex flex-col justify-between">
+            <div className="w-full sm:w-1/3 border rounded-2xl p-6 flex flex-col justify-between">
               <div className="flex justify-between">
                 <h1 className="text-2xl 2xl:text-4xl font-bold w-[60%]">
                   ¿QUIÉN ES JP DEV?
@@ -125,9 +126,6 @@ export function Portafolio() {
           </div>
 
         </div>
-
-
-
       </section>
 
       <section className="h-auto space-y-10 w-full" id="projects">
@@ -139,7 +137,7 @@ export function Portafolio() {
           </span>
         </div>
 
-        <div className="grid grid-cols-3 grid-rows-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  sm:grid-rows-2 gap-4">
           {
             projects.map((project) => (
               <div
@@ -164,16 +162,17 @@ export function Portafolio() {
         </div>
       </section>
 
-      <section className="h-auto w-full border bg-[url('/about.png')] rounded-2xl p-10 bg-cover" id="aboutme">
-        <div className="flex">
-          <div className="w-1/2">
+      <section className="h-auto w-full border bg-[url('/about.png')] rounded-2xl p-4 sm:p-10 bg-cover" id="aboutme">
+        <div className="flex flex-col sm:flex-row">
+
+          <div className="w-full sm:w-1/2 mb-10 sm:mb-0">
             <h1 className="text-4xl text-[#C8FF00] font-bold">PROJECTOS</h1>
             <span className="bg-white text-lg tracking-[.40em] px-[35px]">
               PROJECTS
             </span>
 
-            <div className="text-white">
-              <h1 className="text-7xl 2xl:text-8xl my-10">
+            <div className="text-white ">
+              <h1 className="text-5xl sm:text-7xl 2xl:text-8xl my-10">
                 Hola soy JP, ¡Encantado de Conocerte!
               </h1>
               <div className="text-2xl 2xl:text-3xl space-y-5">
@@ -193,7 +192,7 @@ export function Portafolio() {
         </div>
       </section>
 
-      <footer className="h-[150px] flex justify-between items-center">
+      <footer className="h-[150px] flex sm:flex-row flex-col justify-evenly sm:justify-between items-center">
         <h1 className="text-xl font-semibold tracking-[.30em] border-b-2">
           @ PORTFOLIO WEB | JP
         </h1>
