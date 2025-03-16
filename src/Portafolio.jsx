@@ -15,6 +15,7 @@ const redes = [
 
 const projects = [
   { path: 'https://journal-app-drab-zeta.vercel.app/', title: 'Journal App', description: 'Escribe el dia a día en un solo lugar', fondo: '/project1.png' },
+  { path: 'https://music-jp.vercel.app/', title: 'Music App', description: 'App de musicas con diseño minimalista', fondo: '/project2.png' },
 
 ]
 
